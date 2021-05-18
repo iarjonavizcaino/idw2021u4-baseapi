@@ -3,13 +3,13 @@
  */
 const mongoose = require('mongoose');
 
-const paisSchema = new mongoose.Schema({
-    nombrepais: {
+const schema = new mongoose.Schema({
+    name: {
         type: String,
         required: true
     }
 });
 
-const userModel = mongoose.model('Pais', paisSchema, 'pais');
+const userModel = mongoose.model('Country', schema, 'country');
 
 module.exports = userModel;
